@@ -39,8 +39,7 @@ export function WebBrochureBanner() {
           </p>
         </div>
         <Link 
-          href="https://artswisdom.com/브로슈어/" 
-          target="_blank"
+          href="/brochure" 
           className="px-8 py-2 bg-[#8c5a5a] text-white font-medium rounded-full hover:bg-[#7a4e4e] transition-colors shadow-md flex items-center gap-2"
         >
           바로가기

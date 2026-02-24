@@ -38,11 +38,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "https://refxscvyacxtohfjxysh.supabase.co/storage/v1/object/public/images/logo/logo-symbol.png" },
-      { url: "https://artswisdom.com/wp-content/uploads/2020/05/cropped-지혜의밭_그래픽확장형1-32x32.png", sizes: "32x32" },
-      { url: "https://artswisdom.com/wp-content/uploads/2020/05/cropped-지혜의밭_그래픽확장형1-192x192.png", sizes: "192x192" },
+      { url: "https://refxscvyacxtohfjxysh.supabase.co/storage/v1/object/public/images/logo/logo-symbol.png", sizes: "32x32" },
+      { url: "https://refxscvyacxtohfjxysh.supabase.co/storage/v1/object/public/images/logo/logo-symbol.png", sizes: "192x192" },
     ],
     shortcut: "/favicon.ico",
-    apple: "https://artswisdom.com/wp-content/uploads/2020/05/cropped-지혜의밭_그래픽확장형1-180x180.png",
+    apple: "https://refxscvyacxtohfjxysh.supabase.co/storage/v1/object/public/images/logo/logo-symbol.png",
   },
   openGraph: {
     type: "website",
@@ -54,10 +54,10 @@ export const metadata: Metadata = {
       "몸과 마음을 잇는, 사람과 사람을 잇는 보다 건강하고 아름다운 사회를 만듭니다.",
     images: [
       {
-        url: "https://artswisdom.com/wp-content/uploads/2020/05/KakaoTalk_Moim_7U5oDzAgjzQzgMEGRj4zRWT4rHbnXA-scaled-e1589436452935.jpg",
-        width: 2300,
-        height: 1534,
-        alt: "지혜의밭 메인 이미지",
+        url: "https://refxscvyacxtohfjxysh.supabase.co/storage/v1/object/public/images/logo/logo-vertical.png",
+        width: 1200,
+        height: 630,
+        alt: "지혜의밭 로고 이미지",
       },
     ],
   },
@@ -101,7 +101,7 @@ export default function RootLayout({
               name: "지혜의밭",
               alternateName: "Artswisdom",
               url: "https://artswisdom.com",
-              logo: "https://artswisdom.com/images/logo/logo-square.png",
+              logo: "https://refxscvyacxtohfjxysh.supabase.co/storage/v1/object/public/images/logo/logo-square.png",
               description:
                 "예술의 힘으로 본래의 인간성을 회복하여 삶의 터전을 지혜롭게 가꾸는 소셜벤처·사회적기업",
               address: {
