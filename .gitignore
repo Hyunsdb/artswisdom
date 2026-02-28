@@ -44,3 +44,5 @@ next-env.d.ts
 .mcp.json
 .moai/
 .idea/
+
+password.md
