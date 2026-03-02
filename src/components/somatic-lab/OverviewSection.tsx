@@ -213,29 +213,31 @@ export function OverviewSection() {
       </div>
 
       {/* 전인적 성장 - Holistic Section */}
-      <div className="py-16 md:py-24 bg-[#2c2c2c] text-white">
-        <div className="container">
+      <div className="relative py-16 md:py-24 text-white">
+        {/* Background Image */}
+        <Image
+          src={images.somaticLab.holisticSomatic}
+          alt=""
+          fill
+          className="object-cover"
+          aria-hidden="true"
+        />
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/70" />
+
+        <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="max-w-4xl mx-auto text-center"
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+            <p className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12">
               소매틱스는 전인적인 성장을 위해 전체를 봅니다.
-            </h2>
-          </motion.div>
+            </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
-            {/* Text Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="space-y-6 text-gray-200 leading-relaxed"
-            >
+            <div className="space-y-6 text-gray-200 leading-relaxed">
               <p>
                 <strong>
                   <span className="text-[#ffcc99]">홀리스틱</span>이란
@@ -272,26 +274,10 @@ export function OverviewSection() {
                 <br />
                 만성적인 통증은 잘못된 습관이 빚은 결과입니다.
               </p>
-            </motion.div>
+            </div>
+          </motion.div>
 
-            {/* Image */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative aspect-[1099/1178] max-w-md mx-auto lg:max-w-none"
-            >
-              <Image
-                src={images.somaticLab.holisticSomatic}
-                alt="소매틱 무브먼트 - 전인적 성장"
-                fill
-                className="object-contain"
-              />
-            </motion.div>
-          </div>
-
-          {/* 소매틱 무브먼트 heading */}
+          {/* 소매틱 무브먼트 heading - hidden on mobile like original */}
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -305,7 +291,7 @@ export function OverviewSection() {
       </div>
 
       {/* 소매틱스가 독특하고 효과적인 이유 */}
-      <div className="py-16 md:py-24 bg-[#f5f1e8]">
+      <div className="py-16 md:py-24 bg-white">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
             {/* Image */}
@@ -314,13 +300,13 @@ export function OverviewSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative aspect-[4/3] overflow-hidden"
+              className="relative aspect-[1099/1178] max-w-md mx-auto lg:max-w-none"
             >
               <Image
-                src={images.somaticLab.methodology}
-                alt="소매틱 무브먼트"
+                src={images.somaticLab.holisticSomatic}
+                alt="소매틱 무브먼트 - 전인적 성장"
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             </motion.div>
 
