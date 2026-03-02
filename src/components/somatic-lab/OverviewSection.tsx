@@ -5,7 +5,7 @@ import Image from "next/image";
 import { images } from "@/constants/images";
 
 export function OverviewSection() {
-  const ageGroups = [
+  const ageGroups: { title: string; image: string; description: string; type?: "connector" }[] = [
     {
       title: "청소년기",
       image: images.somaticLab.ageAdolescent,
@@ -29,6 +29,12 @@ export function OverviewSection() {
       image: images.somaticLab.ageElderly,
       description:
         "틀어진 몸에 의해 신체적 및 정서적 영역의 기능 저하가 시작되며, 움직임 부족으로 뇌 신경계 및 근육과 관절이 노쇠하며 거동의 불편으로 삶의 질이 떨어집니다.",
+    },
+    {
+      title: "이음",
+      image: images.somaticLab.ageConnector,
+      description: "",
+      type: "connector",
     },
     {
       title: "스포츠",
@@ -124,10 +130,10 @@ export function OverviewSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto"
           >
             {/* Trinity Diagram */}
-            <div className="relative aspect-square max-w-md mx-auto">
+            <div className="relative aspect-[689/347] w-full">
               <Image
                 src={images.somaticLab.trinityConcept}
                 alt="Body Mind Soul - Bodyfulness"
@@ -136,31 +142,14 @@ export function OverviewSection() {
               />
             </div>
 
-            {/* Description */}
-            <div className="space-y-6">
-              <h3 className="text-xl md:text-2xl font-bold text-[#8b6f47]">
-                마인드풀니스와 바디풀니스
-              </h3>
-              <div className="space-y-4 text-gray-700">
-                <div className="flex items-start gap-2">
-                  <span className="text-[#8b6f47] mt-1 flex-shrink-0">☑</span>
-                  <span>
-                    <strong>마인드풀니스(마음 챙김)?</strong>
-                    <br />
-                    주로 정좌 자세로 인내를 요하며 의식을 집중하여 마음을 고요히
-                    하는 것
-                  </span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-[#8b6f47] mt-1 flex-shrink-0">☑</span>
-                  <span>
-                    <strong>바디풀니스(몸 챙김)?</strong>
-                    <br />
-                    신경과학기반의 움직임 명상으로 몸의 감각을 알아차림하며
-                    마음까지 돌보는 것
-                  </span>
-                </div>
-              </div>
+            {/* Mindfulness vs Bodyfulness */}
+            <div className="relative aspect-[690/227] w-full">
+              <Image
+                src={images.somaticLab.mindfulnessBodyfulness}
+                alt="마인드풀니스와 바디풀니스"
+                fill
+                className="object-contain"
+              />
             </div>
           </motion.div>
         </div>
@@ -188,21 +177,35 @@ export function OverviewSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.05 * index }}
+                className={group.type === "connector" ? "flex items-center justify-center" : ""}
               >
-                <h3 className="text-base font-bold text-[#8b6f47] text-center mb-3">
-                  {group.title}
-                </h3>
-                <div className="relative aspect-[3/4] mb-3 overflow-hidden">
-                  <Image
-                    src={group.image}
-                    alt={group.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <p className="text-xs text-gray-600 leading-relaxed">
-                  {group.description}
-                </p>
+                {group.type === "connector" ? (
+                  <div className="relative w-16 h-16 md:w-20 md:h-20 mx-auto">
+                    <Image
+                      src={group.image}
+                      alt={group.title}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                ) : (
+                  <>
+                    <h3 className="text-base font-bold text-[#8b6f47] text-center mb-3">
+                      {group.title}
+                    </h3>
+                    <div className="relative aspect-[3/4] mb-3 overflow-hidden">
+                      <Image
+                        src={group.image}
+                        alt={group.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <p className="text-xs text-gray-600 leading-relaxed">
+                      {group.description}
+                    </p>
+                  </>
+                )}
               </motion.div>
             ))}
           </div>
@@ -210,49 +213,58 @@ export function OverviewSection() {
       </div>
 
       {/* 전인적 성장 - Holistic Section */}
-      <div
-        className="py-16 md:py-24 text-white relative overflow-hidden"
-        style={{
-          backgroundImage: `url(${images.somaticLab.methodologyMain})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="container relative z-10">
+      <div className="py-16 md:py-24 bg-[#2c2c2c] text-white">
+        <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto text-center space-y-6"
+            className="text-center mb-12"
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
               소매틱스는 전인적인 성장을 위해 전체를 봅니다.
             </h2>
-            <div className="space-y-4 text-gray-200 leading-relaxed">
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
+            {/* Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="space-y-6 text-gray-200 leading-relaxed"
+            >
               <p>
-                <strong className="text-yellow-400 underline">홀리스틱</strong>
-                이란 홀리즘(holism)적인 의미로 &apos;전체&apos;를 말하는데,
+                <strong>
+                  <span className="text-[#ffcc99]">홀리스틱</span>이란
+                  홀리즘
+                </strong>
+                (holism)적인 의미로 <strong>&apos;전체&apos;</strong>를
+                말하는데,
                 <br />
                 그리스어의{" "}
-                <strong>전체(whole)건강(health)치유(healing) 신성한(holy)</strong>
+                <strong>
+                  전체(whole)건강(health)치유(healing) 신성한(holy)
+                </strong>
                 등의 어원을 담고 있습니다.
                 <br />
                 &apos;전체&apos;는 유기적으로 연결되어 있으며{" "}
-                <strong className="underline">잠재적 치유성</strong>을 갖고
-                있다고 믿습니다.
+                <span className="text-[#ffcc99]">
+                  <strong>잠재적 치유성</strong>
+                </span>
+                을 갖고 있다고 믿습니다.
               </p>
-              <p className="pt-4">
+              <p>
                 우리의 몸과 마음은 유기적으로 연결되어 있습니다.
                 <br />
                 스트레스를 받으면 우리의 근육은 긴장을 하고, 근육 긴장이 계속
                 발생하면 습관이 되어
                 <br />
-                <strong className="text-yellow-400 underline">
-                  감각 운동 기억 상실증(SMA)
-                </strong>
+                <span className="text-[#ffcc99]">
+                  <strong>감각 운동 기억 상실증(SMA)</strong>
+                </span>
                 에 빠지게 됩니다.
                 <br />
                 그래서 효율적인 방법이 아닌, 감각하고 움직이는 방법을
@@ -260,25 +272,35 @@ export function OverviewSection() {
                 <br />
                 만성적인 통증은 잘못된 습관이 빚은 결과입니다.
               </p>
-            </div>
-          </motion.div>
-        </div>
-      </div>
+            </motion.div>
 
-      {/* 소매틱 무브먼트 효과 */}
-      <div className="py-16 md:py-24 bg-white">
-        <div className="container">
-          <motion.div
+            {/* Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative aspect-[1099/1178] max-w-md mx-auto lg:max-w-none"
+            >
+              <Image
+                src={images.somaticLab.holisticSomatic}
+                alt="소매틱 무브먼트 - 전인적 성장"
+                fill
+                className="object-contain"
+              />
+            </motion.div>
+          </div>
+
+          {/* 소매틱 무브먼트 heading */}
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-5xl mx-auto text-center space-y-8"
+            className="text-2xl md:text-3xl font-bold text-center mt-16 hidden md:block"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-              이제 소매틱 무브먼트를 통해 우아한 마음의 길을 열어갑니다.
-            </h2>
-          </motion.div>
+            이제 소매틱 무브먼트를 통해 우아한 마음의 길을 열어갑니다.
+          </motion.h2>
         </div>
       </div>
 

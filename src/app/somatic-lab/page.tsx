@@ -29,9 +29,9 @@ export default async function SomaticLabPage() {
     <main className="bg-[#f5f1e8]">
       <SomaticLabHero />
       <OverviewSection />
+      <ArticleSection />
       <ResearchersSection researchers={researchers} />
       <ProgramListSection programs={programs} />
-      <ArticleSection />
     </main>
   );
 }

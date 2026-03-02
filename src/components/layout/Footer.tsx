@@ -59,17 +59,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="bg-[#B5BAA0] py-4 mt-20">
-        <div className="container mx-auto px-4 flex items-center justify-center gap-6">
-          <span className="text-white font-bold text-lg">지혜의밭 웹브로슈어</span>
-          <Link 
-            href="/brochure" 
-            className="bg-[#8C6A5E] text-white px-6 py-1.5 rounded-full text-sm font-medium hover:bg-[#7a5c52] transition-colors"
-          >
-            바로가기
-          </Link>
-        </div>
-      </div>
+      {/* WebBrochureBanner is rendered globally in layout.tsx */}
     </footer>
   );
 }

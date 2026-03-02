@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { images } from "@/constants/images";
 
 export function ArticleSection() {
   return (
@@ -51,27 +52,21 @@ export function ArticleSection() {
               </a>
             </div>
 
-            {/* Right: Images */}
-            <div className="relative">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="relative aspect-[3/4] overflow-hidden shadow-lg">
-                  <Image
-                    src="https://refxscvyacxtohfjxysh.supabase.co/storage/v1/object/public/images/somatic-lab/article-image-1.jpg"
-                    alt="소매틱스 연구"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative aspect-[3/4] overflow-hidden shadow-lg mt-8">
-                  <Image
-                    src="https://refxscvyacxtohfjxysh.supabase.co/storage/v1/object/public/images/somatic-lab/article-image-2.jpg"
-                    alt="소매틱스 논문"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
+            {/* Right: Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative aspect-[787/478] w-full"
+            >
+              <Image
+                src={images.somaticLab.somaticsResearch}
+                alt="소매틱스 연구 논문"
+                fill
+                className="object-contain"
+              />
+            </motion.div>
           </div>
         </motion.div>
       </div>
