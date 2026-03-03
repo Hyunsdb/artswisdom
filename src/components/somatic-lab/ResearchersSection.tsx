@@ -26,10 +26,10 @@ export function ResearchersSection({ researchers }: ResearchersSectionProps) {
           >
             Somatics Researcher
           </h2>
-          <p className="text-white/80 text-base md:text-lg leading-relaxed">
+          <p className="text-white/80 text-sm md:text-base lg:text-lg leading-relaxed">
             발레 전공, 한국 무용 전공, 표현 예술 심리상담 전공, 물리 치료 전공,
             요가, 명상 전공, 통합 예술 치유 전공,
-            <br />
+            <br className="hidden md:block" />
             교육학 등을 전공하고 소매틱스를 통해 몸과 마음을 깊이 있게
             공부하신 최고 수준의 전문가들로 구성되어 있습니다.
           </p>
@@ -67,7 +67,7 @@ export function ResearchersSection({ researchers }: ResearchersSectionProps) {
         </div>
 
         {/* Researcher Details - scrollable cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-5 gap-4">
           {researchers.map((researcher) => (
             <div key={`detail-${researcher.name}`} className="text-white/80 text-xs leading-relaxed">
               {(researcher.qualifications || []).map((qual, i) => (

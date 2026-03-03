@@ -26,7 +26,7 @@ export function ProgramListSection({ programs }: ProgramListSectionProps) {
   return (
     <section id="program">
       {/* Program Header - Dark photo background */}
-      <div className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+      <div className="relative h-[40vh] md:h-[50vh] min-h-[300px] md:min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src={images.somaticLab.programsHeader}
@@ -41,7 +41,7 @@ export function ProgramListSection({ programs }: ProgramListSectionProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative z-20 text-4xl md:text-6xl lg:text-7xl font-serif text-white italic"
+          className="relative z-20 text-3xl md:text-6xl lg:text-7xl font-serif text-white italic"
           style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}
         >
           Somatics Program
@@ -57,7 +57,7 @@ export function ProgramListSection({ programs }: ProgramListSectionProps) {
           <div key={program.id} className={`${bgColor}`}>
             <div className="container py-0">
               <div
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch min-h-[500px]`}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch min-h-[400px] lg:min-h-[500px]`}
               >
                 {/* Image Side */}
                 <motion.div
@@ -65,7 +65,7 @@ export function ProgramListSection({ programs }: ProgramListSectionProps) {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  className={`relative min-h-[350px] lg:min-h-[500px] ${
+                  className={`relative min-h-[250px] md:min-h-[350px] lg:min-h-[500px] ${
                     isReverse ? "lg:order-2" : ""
                   }`}
                 >

@@ -169,7 +169,8 @@ export function OverviewSection() {
             Characteristics by age
           </motion.h2>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+          {/* Desktop: 7-column grid */}
+          <div className="hidden md:grid md:grid-cols-4 lg:grid-cols-7 gap-4">
             {ageGroups.map((group, index) => (
               <motion.div
                 key={group.title}
@@ -206,6 +207,34 @@ export function OverviewSection() {
                     </p>
                   </>
                 )}
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Mobile: 2-column grid, connector hidden */}
+          <div className="grid grid-cols-2 gap-4 md:hidden">
+            {ageGroups.filter(g => g.type !== "connector").map((group, index) => (
+              <motion.div
+                key={group.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.05 * index }}
+              >
+                <h3 className="text-sm font-bold text-[#8b6f47] text-center mb-2">
+                  {group.title}
+                </h3>
+                <div className="relative aspect-[3/4] mb-2 overflow-hidden">
+                  <Image
+                    src={group.image}
+                    alt={group.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <p className="text-[11px] text-gray-600 leading-relaxed">
+                  {group.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -300,7 +329,7 @@ export function OverviewSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative aspect-[1099/1178] max-w-md mx-auto lg:max-w-none"
+              className="relative aspect-square md:aspect-[1099/1178] max-w-xs md:max-w-md mx-auto lg:max-w-none"
             >
               <Image
                 src={images.somaticLab.holisticSomatic}

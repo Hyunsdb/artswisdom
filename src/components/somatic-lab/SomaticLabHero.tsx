@@ -6,7 +6,7 @@ import { images } from "@/constants/images";
 
 export function SomaticLabHero() {
   return (
-    <section className="relative w-full h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-[50vh] md:h-[60vh] min-h-[350px] md:min-h-[500px] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -28,7 +28,7 @@ export function SomaticLabHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-serif text-white italic"
+          className="text-3xl md:text-7xl lg:text-8xl font-serif text-white italic"
           style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}
         >
           Somatic Laboratory
