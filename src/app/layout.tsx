@@ -155,7 +155,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           className="min-h-screen"
           style={{
             paddingTop: "var(--header-height)",
-            paddingBottom: "calc(var(--brochure-banner-safe-space) + env(safe-area-inset-bottom, 0px))",
           }}
         >
           {children}
