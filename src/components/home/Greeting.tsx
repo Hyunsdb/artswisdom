@@ -18,12 +18,12 @@ export function Greeting() {
           transition={{ duration: 0.6 }}
           className="flex justify-center lg:justify-start" // Align left
         >
-          <div className="relative w-full max-w-md aspect-[3/4] overflow-hidden shadow-2xl">
+          <div className="relative w-full aspect-[969/961] overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.15)] lg:transform lg:translate-x-[20px] lg:-translate-y-[28px] lg:scale-[0.8]">
              <Image
               src={images.ceo.main}
               alt="대표이사 문수정"
               fill
-              className="object-cover"
+              className="object-cover object-top"
               sizes="(max-width: 1024px) 100vw, 50vw"
               priority={false}
             />

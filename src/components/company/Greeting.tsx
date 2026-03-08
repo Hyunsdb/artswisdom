@@ -67,12 +67,12 @@ export function Greeting() {
           transition={{ duration: 0.6 }}
           className="order-1 lg:order-2"
         >
-          <div className="relative aspect-[4/5] max-w-md mx-auto lg:mx-0 lg:ml-auto rounded-2xl overflow-hidden shadow-lg">
+          <div className="relative w-full aspect-[969/961] overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.15)] lg:transform lg:translate-x-[20px] lg:-translate-y-[28px] lg:scale-[0.8]">
             <Image
               src={images.ceo.main}
               alt="지혜의밭 대표이사"
               fill
-              className="object-cover"
+              className="object-cover object-top"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
