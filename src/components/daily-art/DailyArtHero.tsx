@@ -24,7 +24,7 @@ export function DailyArtHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative z-20 text-5xl md:text-7xl lg:text-8xl font-serif text-white italic"
+          className="relative z-20 text-5xl md:text-7xl lg:text-7xl font-serif text-white italic"
           style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}
         >
           Arts of Living

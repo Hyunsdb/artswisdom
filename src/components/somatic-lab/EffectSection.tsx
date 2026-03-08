@@ -125,18 +125,18 @@ export function EffectSection() {
   };
 
   return (
-    <section id="effect" ref={ref} className="py-16 md:py-24 bg-[#fcf3eb]">
+    <section id="effect" ref={ref} className="py-16 md:py-24 bg-gray-50">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-4xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="somatic-heading text-3xl md:text-[40px] mb-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
             소매틱스 프로그램의 효과
           </h2>
-          <p className="somatic-body text-base md:text-[15px] leading-relaxed">
+          <p className="text-gray-600 text-lg leading-relaxed">
             소매틱스는 몸, 마음, 사회적 관계 전반에 걸쳐 긍정적인 변화를
             가져옵니다. 과학적 연구와 임상 경험을 통해 검증된 효과들입니다.
           </p>
@@ -147,7 +147,7 @@ export function EffectSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mb-12 relative aspect-[3/1] overflow-hidden"
+          className="mb-12 relative aspect-[3/1] rounded-3xl overflow-hidden shadow-lg"
         >
           <Image
             src={images.somaticLab.methodology}
@@ -157,7 +157,7 @@ export function EffectSection() {
           />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {effects.map((effect, index) => {
             const colors = getColorClasses(effect.color);
             return (
@@ -166,22 +166,21 @@ export function EffectSection() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                className="bg-[#fcf3eb] border border-[#e4d9cc] p-8"
+                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300"
               >
                 <div
-                  className={`w-14 h-14 ${colors.iconBg} flex items-center justify-center ${colors.text} mb-5`}
+                  className={`w-16 h-16 ${colors.iconBg} rounded-2xl flex items-center justify-center ${colors.text} mb-6`}
                 >
                   {effect.icon}
                 </div>
-                <h3 className="somatic-heading text-[30px] leading-tight mb-4">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
                   {effect.category}
                 </h3>
                 <ul className="space-y-3">
                   {effect.items.map((item, itemIndex) => (
                     <li
                       key={itemIndex}
-                      className="flex items-center text-[#5b5b5b] text-[15px]"
-                      style={{ fontFamily: "var(--font-noto-sans-kr), 'Noto Sans KR', sans-serif" }}
+                      className="flex items-center text-gray-600"
                     >
                       <span
                         className={`w-2 h-2 rounded-full ${colors.bg} ${colors.text} mr-3 flex-shrink-0`}
@@ -210,7 +209,7 @@ export function EffectSection() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-16"
         >
-          <h3 className="somatic-heading text-2xl md:text-[40px] mb-8 text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
             연령대별 프로그램
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">

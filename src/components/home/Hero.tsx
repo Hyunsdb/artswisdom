@@ -94,7 +94,7 @@ export function Hero() {
                       <p className="text-base sm:text-lg md:text-xl text-white/90 tracking-[0.2em] uppercase font-light">
                         {slide.subtitle}
                       </p>
-                      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight font-serif">
+                      <h1 className="text-5xl md:text-7xl lg:text-7xl font-bold text-white leading-tight font-serif">
                         {slide.title}
                       </h1>
                       <div className="w-24 h-[1px] bg-white/50 mx-auto my-8" />

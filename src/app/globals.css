@@ -57,7 +57,7 @@
 
   /* Layout */
   --header-height: 58px;
-  --brochure-banner-safe-space: clamp(7rem, 14vw, 9.5rem);
+  --brochure-banner-safe-space: 0px;
   --container-max-width: 1200px;
 
   /* User Provided WP Colors */
@@ -102,6 +102,7 @@ body {
   font-size: 15px; /* Default mobile size */
   font-weight: 400;
   line-height: 1.66;
+  padding-bottom: calc(var(--brochure-banner-safe-space) + env(safe-area-inset-bottom, 0px));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

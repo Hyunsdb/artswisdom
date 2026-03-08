@@ -64,7 +64,7 @@ export function ResearchersSection({ researchers }: ResearchersSectionProps) {
         </div>
 
         {/* Researcher Details - scrollable cards */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-4">
           {researchers.map((researcher) => (
             <div key={`detail-${researcher.name}`} className="text-white/90 text-xs leading-relaxed" style={{ fontFamily: "var(--font-noto-sans-kr), 'Noto Sans KR', sans-serif" }}>
               {(researcher.qualifications || []).map((qual, i) => (

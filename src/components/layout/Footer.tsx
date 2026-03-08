@@ -5,10 +5,7 @@ import { images } from "@/constants/images";
 
 export function Footer() {
   return (
-    <footer 
-      className="bg-[#f2ddcc] pt-20 border-t border-black/5"
-      style={{ paddingBottom: 'calc(var(--brochure-banner-safe-space) + env(safe-area-inset-bottom, 0px))' }}
-    >
+    <footer className="bg-[#f2ddcc] pt-20 border-t border-black/5">
       <div className="container max-w-[1300px] mx-auto px-4">
         
         {/* Social Icons Section - Centered */}

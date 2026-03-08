@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { Section } from "@/components/common";
-import { motion } from "framer-motion";
 import { images } from "@/constants/images";
 
 interface CoreValueItem {
@@ -42,13 +41,9 @@ export function CoreValues() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14 max-w-6xl mx-auto">
-          {coreValues.map((item, index) => (
-            <motion.div
+          {coreValues.map((item) => (
+            <div
               key={item.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
               className="flex flex-col items-center"
             >
               {/* Icon Circle */}
@@ -64,13 +59,13 @@ export function CoreValues() {
               </div>
 
               {/* Text Content: keep text block centered on the same vertical axis as the image */}
-              <div className="w-36 md:w-44 text-center">
-                <h3 className="text-[42px] leading-none font-serif font-bold text-[#8c5a5a] mb-2">{item.title}</h3>
-                <p className="text-[#555] text-[26px] break-keep leading-[1.35] font-medium">
+              <div className="text-center">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                <p className="text-gray-700 text-sm md:text-[15px] leading-relaxed md:whitespace-nowrap">
                   {item.description}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

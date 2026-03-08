@@ -23,7 +23,7 @@ export function NoticeHero() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif text-white tracking-tight font-libre-baskerville" style={{ fontFamily: "var(--font-libre-baskerville), serif" }}>
+          <h1 className="text-5xl md:text-7xl lg:text-7xl font-serif text-white tracking-tight font-libre-baskerville" style={{ fontFamily: "var(--font-libre-baskerville), serif" }}>
             Notice
           </h1>
         </motion.div>

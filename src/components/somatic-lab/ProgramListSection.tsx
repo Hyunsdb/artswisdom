@@ -57,7 +57,7 @@ export function ProgramListSection({ programs }: ProgramListSectionProps) {
           <div key={program.id} className={`${bgColor}`}>
             <div className="container py-0">
               <div
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch min-h-[420px] lg:min-h-[680px]`}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch min-h-[400px] lg:min-h-[500px]`}
               >
                 {/* Image Side */}
                 <motion.div
@@ -65,7 +65,7 @@ export function ProgramListSection({ programs }: ProgramListSectionProps) {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  className={`relative min-h-[260px] md:min-h-[360px] lg:min-h-[680px] ${
+                  className={`relative min-h-[250px] md:min-h-[350px] lg:min-h-[500px] ${
                     isReverse ? "lg:order-2" : ""
                   }`}
                 >
@@ -83,7 +83,7 @@ export function ProgramListSection({ programs }: ProgramListSectionProps) {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-                  className={`flex flex-col justify-center px-8 md:px-12 lg:px-20 py-12 lg:py-16 ${
+                  className={`flex flex-col justify-center px-8 md:px-12 lg:px-16 py-12 ${
                     isReverse ? "lg:order-1" : ""
                   }`}
                 >

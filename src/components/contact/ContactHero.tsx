@@ -21,7 +21,7 @@ export function ContactHero() {
           className="text-center"
         >
           <h1 
-            className="text-[80px] md:text-[100px] lg:text-[120px] text-white tracking-tight leading-none"
+            className="text-5xl md:text-7xl lg:text-7xl text-white tracking-tight leading-none"
             style={{ 
               fontFamily: "var(--font-libre-baskerville), serif",
               fontStyle: "normal",

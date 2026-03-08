@@ -2,10 +2,11 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function WebBrochureBanner() {
   const [isVisible, setIsVisible] = useState(false);
+  const bannerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,8 +20,26 @@ export function WebBrochureBanner() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const applySafeSpace = () => {
+      const height = isVisible ? bannerRef.current?.offsetHeight ?? 0 : 0;
+      document.documentElement.style.setProperty(
+        "--brochure-banner-safe-space",
+        `${height}px`
+      );
+    };
+
+    applySafeSpace();
+    window.addEventListener("resize", applySafeSpace);
+    return () => {
+      window.removeEventListener("resize", applySafeSpace);
+      document.documentElement.style.setProperty("--brochure-banner-safe-space", "0px");
+    };
+  }, [isVisible]);
+
   return (
     <motion.div
+      ref={bannerRef}
       initial={{ y: 100, opacity: 0 }}
       animate={{ 
         y: isVisible ? 0 : 100, 

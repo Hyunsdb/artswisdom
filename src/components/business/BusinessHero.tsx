@@ -26,7 +26,7 @@ export function BusinessHero() {
           className="text-center"
         >
           <h1 
-            className="text-6xl md:text-8xl lg:text-9xl font-serif text-white tracking-tight drop-shadow-2xl"
+            className="text-5xl md:text-7xl lg:text-7xl font-serif text-white tracking-tight drop-shadow-2xl"
             style={{ fontFamily: "var(--font-libre-baskerville), serif" }}
           >
             Educational Event

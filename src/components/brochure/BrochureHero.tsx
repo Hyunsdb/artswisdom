@@ -34,7 +34,7 @@ export function BrochureHero() {
           className="text-center space-y-6"
         >
           <h1 
-            className="text-5xl md:text-7xl lg:text-8xl font-serif text-white tracking-tight drop-shadow-xl"
+            className="text-5xl md:text-7xl lg:text-7xl font-serif text-white tracking-tight drop-shadow-xl"
             style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}
           >
             Brochure

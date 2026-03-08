@@ -32,7 +32,7 @@ export function HealsomaHero() {
           <span className="text-white/90 text-xl md:text-2xl font-light tracking-widest mb-4">
             온 전 한 쉼
           </span>
-          <h1 className="text-white text-5xl md:text-7xl lg:text-8xl font-serif font-medium tracking-wide">
+          <h1 className="text-white text-5xl md:text-7xl lg:text-7xl font-serif font-medium tracking-wide">
             HEALSOMA
           </h1>
         </motion.div>

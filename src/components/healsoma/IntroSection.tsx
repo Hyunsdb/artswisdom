@@ -4,38 +4,37 @@ import { motion } from "framer-motion";
 
 export function IntroSection() {
   return (
-    <section className="py-20 md:py-32 bg-[#BBCcb5] text-center">
+    <section className="bg-[#B6C2AE] px-5 py-10 text-center md:px-0 md:py-[60px]">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mx-auto space-y-6"
+          className="mx-auto max-w-[1200px]"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#333] mb-8">
+          <h2 className="mb-4 text-[18px] font-semibold text-[#2B2B2B] md:mb-6 md:text-[35px]">
             일상의 쉼을 더하는 곳!
           </h2>
           
-          <div className="space-y-4 text-lg md:text-xl text-[#444] leading-relaxed">
-            <p className="font-medium text-2xl mb-6">&quot;당신도 온전한 쉼이 필요하다&quot;</p>
+          <div className="mx-auto mb-0 text-[15px] text-[#5B5B5B] leading-[1.9] md:text-[20px] md:leading-[1.8]">
             <p>
+              &quot;당신도 온전한 쉼이 필요하다&quot;
+              <br />
               분주한 일상 너머, 깊은 쉼을 통해 평온함을 선사하는 공간.
-            </p>
-            <p>
+              <br />
               몸에 깃든 감각을 깨우고, 마음의 결을 다독이는 나를 위한 작은 사치.
             </p>
           </div>
 
-          <div className="pt-12">
-            <p className="text-[#555] font-bold text-lg mb-4">오직 한 쉼&apos; 힐소마는</p>
-            <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 text-[#555]">
-               <span>Heal(치유/회복)</span>
-               <span className="hidden md:inline">+</span>
-               <span>Soma(몸)</span>
-               <span className="hidden md:inline">=</span>
-               <span>온전한 쉼으로 몸과 마음을 회복</span>
-            </div>
+          <div className="mt-2 text-[15px] text-[#5B5B5B] leading-[1.9] md:mt-4 md:text-[20px] md:leading-[1.8]">
+            <p>
+              <strong>온전한 쉼&apos; 힐소마는</strong>
+              <br />
+              <strong>Heal</strong>(치유하다,회복하다) + <strong>Soma</strong>(지성,감성,영성이 깃든 몸)의 합성어로
+              <br />
+              &quot;온전한 쉼을 통해 몸과 마음을 회복하다&quot;라는 의미입니다.
+            </p>
           </div>
         </motion.div>
       </div>

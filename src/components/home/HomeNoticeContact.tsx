@@ -21,7 +21,7 @@ export async function HomeNoticeContact() {
         {/* Left Column: Notice */}
         <div className="flex flex-col">
           <div className="mb-4 md:mb-5">
-            <h2 className="text-[24px] md:text-[30px] font-semibold leading-normal text-[#2b2b2b] font-['Noto_Sans_KR','Apple_SD_Gothic_Neo','Malgun_Gothic',sans-serif]">
+            <h2 className="text-[24px] md:text-[35px] font-semibold leading-[1.6] md:leading-[2.2em] text-[#85544D] font-['Noto_Sans_KR','Apple_SD_Gothic_Neo','Malgun_Gothic',sans-serif]">
               공지사항
             </h2>
           </div>
@@ -64,7 +64,7 @@ export async function HomeNoticeContact() {
         {/* Right Column: Contact */}
         <div className="flex flex-col">
           <div className="mb-4 md:mb-5">
-            <h2 className="text-[24px] md:text-[30px] font-semibold leading-normal text-[#2b2b2b] font-['Noto_Sans_KR','Apple_SD_Gothic_Neo','Malgun_Gothic',sans-serif]">
+            <h2 className="text-[24px] md:text-[35px] font-semibold leading-[1.6] md:leading-[2.2em] text-[#85544D] font-['Noto_Sans_KR','Apple_SD_Gothic_Neo','Malgun_Gothic',sans-serif]">
               문의하기
             </h2>
           </div>
