@@ -8,17 +8,17 @@ import Image from "next/image";
 
 export function Greeting() {
   return (
-    <Section id="greeting" className="bg-[var(--background)] py-20 lg:py-28 relative">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+    <Section id="greeting" className="bg-[#FCF3EB] py-20 lg:py-28 relative">
+      <div className="flex flex-col md:flex-row gap-10 md:gap-4 items-start max-w-[1140px] mx-auto">
         {/* Left: CEO Portrait (Original Order) */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex justify-center lg:justify-start" // Align left
+          className="w-full md:w-[45.077%] flex justify-center lg:justify-start" // Align left
         >
-          <div className="relative w-full aspect-[969/961] overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.15)] lg:transform lg:translate-x-[20px] lg:-translate-y-[28px] lg:scale-[0.8]">
+          <div className="relative w-full aspect-[969/961] overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.15)] md:transform md:translate-x-[20px] md:-translate-y-[28px] md:scale-[0.8]">
              <Image
               src={images.ceo.main}
               alt="대표이사 문수정"
@@ -36,13 +36,13 @@ export function Greeting() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-col justify-center lg:pt-14"
+          className="w-full md:w-[54.923%] flex flex-col justify-center lg:pt-14 md:pl-6"
         >
-          <h2 className="text-[38px] lg:text-[42px] font-serif font-bold text-[#805656] mb-8 leading-[1.2] tracking-tight">
+          <h2 className="text-[40px] font-['Times_New_Roman',_serif] font-semibold text-[#85544D] mb-8 leading-[1em] tracking-normal">
             Welcome to<br />&nbsp;the Artswisdom
           </h2>
 
-          <div className="space-y-6 text-[#555555] text-[15px] leading-[1.8] font-light">
+          <div className="space-y-6 text-[#555555] text-[15px] leading-[1.8] font-light md:-mt-4">
             <p>
               인간의 최대 가치를 행복이라고 말합니다.<br />
               행복의 요건을 충족하려면 관계맺기를 잘 해야 하는데 가장 먼저 나와의 건강한 관계를<br className="hidden lg:block"/>
