@@ -9,27 +9,23 @@ interface CoreValueItem {
   imageSrc: string;
   title: string;
   description: string;
-  subDescription: string;
 }
 
 const coreValues: CoreValueItem[] = [
   {
     imageSrc: images.values.differentiation,
     title: "차별성",
-    description: "디테일의 차이가 감동으로 이어진다",
-    subDescription: "The difference in detail leads to emotion",
+    description: "디테일의 차이가 감동으로 이어진다.",
   },
   {
     imageSrc: images.values.inclusivity,
     title: "포용성",
-    description: "지속 가능한 성장을 위하여 변화를 수용한다",
-    subDescription: "Embrace change for sustainable growth",
+    description: "지속 가능한 성장을 위하여 변화를 수용한다.",
   },
   {
     imageSrc: images.values.connectivity,
     title: "연결성",
-    description: "모든 에너지는 서로 연결되어 있으므로 우리는 하나다",
-    subDescription: "All energy is connected, so we are one",
+    description: "모든 에너지는 서로 연결되어 있으므로 우리는 하나다.",
   },
 ];
 
@@ -53,10 +49,10 @@ export function CoreValues() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="flex flex-col items-center group"
+              className="flex flex-col items-center"
             >
               {/* Icon Circle */}
-              <div className="relative w-40 h-40 md:w-48 md:h-48 mb-8 rounded-full overflow-hidden bg-white flex items-center justify-center transition-transform duration-500 group-hover:scale-105 shadow-sm">
+              <div className="relative w-40 h-40 md:w-48 md:h-48 mb-8 rounded-full overflow-hidden bg-white flex items-center justify-center shadow-sm">
                 <div className="relative w-full h-full p-4">
                     <Image
                     src={item.imageSrc}
@@ -66,12 +62,14 @@ export function CoreValues() {
                     />
                 </div>
               </div>
-              
-              {/* Text Content */}
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">{item.title}</h3>
-              <p className="text-gray-600 text-lg break-keep px-2 leading-relaxed">
-                {item.description}
-              </p>
+
+              {/* Text Content: keep text block centered on the same vertical axis as the image */}
+              <div className="w-40 md:w-48 text-center">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                <p className="text-gray-600 text-lg break-keep leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>

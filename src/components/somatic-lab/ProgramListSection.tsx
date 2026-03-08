@@ -26,7 +26,7 @@ export function ProgramListSection({ programs }: ProgramListSectionProps) {
   return (
     <section id="program">
       {/* Program Header - Dark photo background */}
-      <div className="relative h-[40vh] md:h-[50vh] min-h-[300px] md:min-h-[400px] flex items-center justify-center overflow-hidden">
+      <div className="relative h-[42vh] md:h-[56vh] min-h-[300px] md:min-h-[420px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src={images.somaticLab.programsHeader}
@@ -35,14 +35,14 @@ export function ProgramListSection({ programs }: ProgramListSectionProps) {
             className="object-cover"
           />
         </div>
-        <div className="absolute inset-0 z-10 bg-black/50" />
+        <div className="absolute inset-0 z-10 bg-black/56" />
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative z-20 text-3xl md:text-6xl lg:text-7xl font-serif text-white italic"
-          style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}
+          className="relative z-20 text-3xl md:text-6xl lg:text-7xl text-white italic"
+          style={{ fontFamily: "var(--font-libre-baskerville), 'Times New Roman', serif" }}
         >
           Somatics Program
         </motion.h2>
@@ -51,7 +51,7 @@ export function ProgramListSection({ programs }: ProgramListSectionProps) {
       {/* Programs List - alternating layout */}
       {programs.map((program, index) => {
         const isReverse = index % 2 === 1;
-        const bgColor = index % 2 === 0 ? "bg-[#f5f1e8]" : "bg-[#e8e4db]";
+        const bgColor = index % 2 === 0 ? "bg-[#fcf3eb]" : "bg-[#efede1]";
 
         return (
           <div key={program.id} className={`${bgColor}`}>
@@ -87,25 +87,27 @@ export function ProgramListSection({ programs }: ProgramListSectionProps) {
                     isReverse ? "lg:order-1" : ""
                   }`}
                 >
-                  <p className="text-sm text-[#8b6f47] mb-3">{getLabel(program.slug)}</p>
+                  <p className="text-sm text-[#85544d] mb-3" style={{ fontFamily: "var(--font-noto-sans-kr), 'Noto Sans KR', sans-serif" }}>{getLabel(program.slug)}</p>
                   <h3
-                    className="text-2xl md:text-4xl font-serif text-[#5D2E1E] mb-6 whitespace-pre-line"
+                    className="text-2xl md:text-[40px] text-[#85544D] mb-6 whitespace-pre-line leading-tight"
                     style={{
-                      fontFamily: "'Georgia', 'Times New Roman', serif",
+                      fontFamily: "'Times New Roman', Times, serif",
+                      fontWeight: 600,
                     }}
                   >
                     {program.title}
                   </h3>
-                  <div className="space-y-4 text-gray-700 leading-relaxed whitespace-pre-line text-sm md:text-base">
+                  <div className="space-y-4 text-[#5b5b5b] leading-relaxed whitespace-pre-line text-sm md:text-[15px]" style={{ fontFamily: "var(--font-noto-sans-kr), 'Noto Sans KR', sans-serif" }}>
                     <p>{program.description}</p>
                   </div>
                   <ul className="mt-6 space-y-2">
                     {(program.features || []).map((bullet, bulletIndex) => (
                       <li
                         key={bulletIndex}
-                        className="flex items-start gap-2 text-gray-700 text-sm md:text-base"
+                        className="flex items-start gap-2 text-[#5b5b5b] text-sm md:text-[15px]"
+                        style={{ fontFamily: "var(--font-noto-sans-kr), 'Noto Sans KR', sans-serif" }}
                       >
-                        <span className="text-[#8b6f47] mt-0.5">–</span>
+                        <span className="text-[#85544d] mt-0.5">–</span>
                         <span>{bullet}</span>
                       </li>
                     ))}

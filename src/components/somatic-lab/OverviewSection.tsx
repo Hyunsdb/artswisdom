@@ -51,16 +51,16 @@ export function OverviewSection() {
   ];
 
   return (
-    <section id="overview" className="bg-[#f5f1e8]">
+    <section id="overview" className="somatic-section">
       {/* 소매틱연구전담부서 */}
-      <div className="py-16 md:py-24">
+      <div className="py-20 md:py-24">
         <div className="container">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12"
+            className="somatic-heading text-3xl md:text-[40px] text-center mb-12"
           >
             소매틱연구전담부서
           </motion.h2>
@@ -80,13 +80,13 @@ export function OverviewSection() {
                 className="object-contain"
               />
             </div>
-            <div className="text-center space-y-3 text-gray-700 leading-relaxed">
-              <p className="font-bold text-lg">
+            <div className="text-center space-y-3 leading-relaxed">
+              <p className="somatic-heading text-xl">
                 Holistic관점의 소매틱을 연구하여
                 <br />
                 새로운 웰니스 패러다임을 만들어 갑니다.
               </p>
-              <p>
+              <p className="somatic-body">
                 웰니스는 나를 제대로 아는 것부터 시작됩니다.
                 <br />
                 동양사상과 심리학, 서양의 뇌과학등을 통섭한
@@ -101,7 +101,7 @@ export function OverviewSection() {
       </div>
 
       {/* What is Somatics? */}
-      <div className="py-16 md:py-24 bg-white">
+      <div className="py-16 md:py-24 bg-[#fcf3eb]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -111,15 +111,14 @@ export function OverviewSection() {
             className="text-center mb-12"
           >
             <h2
-              className="text-3xl md:text-5xl font-serif text-[#5D2E1E] mb-6"
-              style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}
+              className="somatic-heading text-3xl md:text-[60px] mb-6"
             >
               What is Somatics?
             </h2>
-            <p className="text-lg font-bold text-gray-800 mb-2">
+            <p className="somatic-heading text-lg md:text-xl mb-2">
               쓰지 않으면 잃는다 : Use it, lose it
             </p>
-            <p className="text-gray-600 max-w-4xl mx-auto">
+            <p className="somatic-body max-w-4xl mx-auto">
               지금 여기에서 경험하는 효율적인 움직임을 통해 몸과 마음의 문제를
               스스로 해결할 수 있도록 돕는 통합 솔루션, 바디 풀니스(몸명상)입니다
             </p>
@@ -156,15 +155,14 @@ export function OverviewSection() {
       </div>
 
       {/* Characteristics by Age */}
-      <div className="py-16 md:py-24 bg-[#f5f1e8]">
+      <div className="py-16 md:py-24 bg-[#fcf3eb]">
         <div className="container">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-5xl font-serif text-[#5D2E1E] text-center mb-12"
-            style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}
+            className="somatic-heading text-3xl md:text-[60px] text-center mb-12"
           >
             Characteristics by age
           </motion.h2>
@@ -191,7 +189,7 @@ export function OverviewSection() {
                   </div>
                 ) : (
                   <>
-                    <h3 className="text-base font-bold text-[#8b6f47] text-center mb-3">
+                    <h3 className="somatic-heading text-base text-center mb-3">
                       {group.title}
                     </h3>
                     <div className="relative aspect-[3/4] mb-3 overflow-hidden">
@@ -202,7 +200,7 @@ export function OverviewSection() {
                         className="object-cover"
                       />
                     </div>
-                    <p className="text-xs text-gray-600 leading-relaxed">
+                    <p className="somatic-body text-xs leading-relaxed">
                       {group.description}
                     </p>
                   </>
@@ -221,7 +219,7 @@ export function OverviewSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.05 * index }}
               >
-                <h3 className="text-sm font-bold text-[#8b6f47] text-center mb-2">
+                <h3 className="somatic-heading text-sm text-center mb-2">
                   {group.title}
                 </h3>
                 <div className="relative aspect-[3/4] mb-2 overflow-hidden">
@@ -232,7 +230,7 @@ export function OverviewSection() {
                     className="object-cover"
                   />
                 </div>
-                <p className="text-[11px] text-gray-600 leading-relaxed">
+                <p className="somatic-body text-[11px] leading-relaxed">
                   {group.description}
                 </p>
               </motion.div>
@@ -242,7 +240,7 @@ export function OverviewSection() {
       </div>
 
       {/* 전인적 성장 - Holistic Section */}
-      <div className="relative py-16 md:py-24 text-white">
+      <div className="somatic-dark-section relative py-16 md:py-24 text-white">
         {/* Background Image */}
         <Image
           src={images.somaticLab.holisticSomatic}
@@ -262,7 +260,7 @@ export function OverviewSection() {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <p className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12">
+            <p className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-12">
               소매틱스는 전인적인 성장을 위해 전체를 봅니다.
             </p>
 
@@ -320,7 +318,7 @@ export function OverviewSection() {
       </div>
 
       {/* 소매틱스가 독특하고 효과적인 이유 */}
-      <div className="py-16 md:py-24 bg-white">
+      <div className="py-16 md:py-24 bg-[#fcf3eb]">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
             {/* Image */}
@@ -347,12 +345,12 @@ export function OverviewSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="space-y-6"
             >
-              <h3 className="text-2xl md:text-3xl font-bold text-[#5D2E1E]">
+              <h3 className="somatic-heading text-2xl md:text-[40px]">
                 소매틱스가 독특하고 효과적인
                 <br />
                 이유는 무엇입니까?
               </h3>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="somatic-body space-y-4 leading-relaxed">
                 <p>
                   근육을 만들기 위한 일반적인 운동과 달리
                   <br />

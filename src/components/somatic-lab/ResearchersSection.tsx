@@ -10,7 +10,7 @@ interface ResearchersSectionProps {
 
 export function ResearchersSection({ researchers }: ResearchersSectionProps) {
   return (
-    <section id="people" className="bg-[#7C554D] py-16 md:py-24">
+    <section id="people" className="bg-[#85544D] py-16 md:py-24">
       <div className="container">
         {/* Title */}
         <motion.div
@@ -20,13 +20,10 @@ export function ResearchersSection({ researchers }: ResearchersSectionProps) {
           transition={{ duration: 0.6 }}
           className="text-center max-w-4xl mx-auto mb-16"
         >
-          <h2
-            className="text-3xl md:text-5xl lg:text-6xl font-serif text-white mb-6"
-            style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}
-          >
+          <h2 className="text-3xl md:text-5xl lg:text-6xl text-white mb-6" style={{ fontFamily: "'Times New Roman', Times, serif", fontWeight: 600 }}>
             Somatics Researcher
           </h2>
-          <p className="text-white/80 text-sm md:text-base lg:text-lg leading-relaxed">
+          <p className="text-white/90 text-sm md:text-base lg:text-lg leading-relaxed" style={{ fontFamily: "var(--font-noto-sans-kr), 'Noto Sans KR', sans-serif" }}>
             발레 전공, 한국 무용 전공, 표현 예술 심리상담 전공, 물리 치료 전공,
             요가, 명상 전공, 통합 예술 치유 전공,
             <br className="hidden md:block" />
@@ -56,10 +53,10 @@ export function ResearchersSection({ researchers }: ResearchersSectionProps) {
                 />
               </div>
 
-              <h3 className="text-xl md:text-2xl font-bold text-white">
+              <h3 className="text-xl md:text-2xl text-white" style={{ fontFamily: "'Times New Roman', Times, serif", fontWeight: 600 }}>
                 {researcher.name}
               </h3>
-              <p className="text-white/70 text-sm mt-1 italic">
+              <p className="text-white/80 text-sm mt-1 italic">
                 {researcher.specialty}
               </p>
             </motion.div>
@@ -69,7 +66,7 @@ export function ResearchersSection({ researchers }: ResearchersSectionProps) {
         {/* Researcher Details - scrollable cards */}
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-5 gap-4">
           {researchers.map((researcher) => (
-            <div key={`detail-${researcher.name}`} className="text-white/80 text-xs leading-relaxed">
+            <div key={`detail-${researcher.name}`} className="text-white/90 text-xs leading-relaxed" style={{ fontFamily: "var(--font-noto-sans-kr), 'Noto Sans KR', sans-serif" }}>
               {(researcher.qualifications || []).map((qual, i) => (
                 <p key={`q-${i}`}>– {qual}</p>
               ))}

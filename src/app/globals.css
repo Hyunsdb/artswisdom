@@ -261,6 +261,36 @@ h6 {
   display: none;
 }
 
+/* Somatic Lab page-specific style matching original WordPress tone */
+.somatic-lab-page {
+  background-color: #fcf3eb;
+  color: #5b5b5b;
+}
+
+.somatic-lab-page .somatic-heading {
+  color: #85544d;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.somatic-lab-page .somatic-body {
+  color: #5b5b5b;
+  font-family: var(--font-noto-sans-kr), "Noto Sans KR", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+.somatic-lab-page .somatic-section {
+  background-color: #fcf3eb;
+}
+
+.somatic-lab-page .somatic-dark-section {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
 /* Timeline vertical layout */
 .timeline-vertical {
   position: relative;

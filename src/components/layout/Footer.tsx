@@ -5,7 +5,7 @@ import { images } from "@/constants/images";
 
 export function Footer() {
   return (
-    <footer className="bg-[#f2ddcc] pt-20 pb-0 border-t border-black/5">
+    <footer className="bg-[#f2ddcc] pt-20 pb-[100px] border-t border-black/5">
       <div className="container max-w-[1300px] mx-auto px-4">
         
         {/* Social Icons Section - Centered */}

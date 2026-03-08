@@ -26,7 +26,7 @@ export default async function SomaticLabPage() {
   const researchers = researchersData || [];
 
   return (
-    <main className="bg-[#f5f1e8]">
+    <main className="somatic-lab-page bg-[#fcf3eb]">
       <SomaticLabHero />
       <OverviewSection />
       <ArticleSection />

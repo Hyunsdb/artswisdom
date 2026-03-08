@@ -6,7 +6,7 @@ import { images } from "@/constants/images";
 
 export function ArticleSection() {
   return (
-    <section id="article" className="py-16 md:py-24 bg-[#f5f1e8]">
+    <section id="article" className="py-16 md:py-24 bg-[#fcf3eb]">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -18,16 +18,13 @@ export function ArticleSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left: Text Content */}
             <div className="space-y-6">
-              <h2
-                className="text-3xl md:text-4xl font-serif text-[#5D2E1E]"
-                style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}
-              >
+              <h2 className="somatic-heading text-3xl md:text-[40px]">
                 Somatics Article
               </h2>
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="somatic-heading text-2xl">
                 소매틱스 논문
               </h3>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="somatic-body space-y-4 leading-relaxed">
                 <p>
                   ㈜지혜의밭은 세상에 따뜻함을 더하는 사회적기업으로
                   <br />
@@ -46,7 +43,7 @@ export function ArticleSection() {
                 href="https://somatic.artswisdom.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-3 bg-[#7C554D] text-white font-medium rounded hover:bg-[#5D2E1E] transition-colors"
+                className="inline-block px-6 py-3 bg-[#85544D] text-white font-medium hover:bg-[#6f433c] transition-colors"
               >
                 논문 보기
               </a>
@@ -64,7 +61,7 @@ export function ArticleSection() {
                 src={images.somaticLab.somaticsResearch}
                 alt="소매틱스 연구 논문"
                 fill
-                className="object-contain"
+                className="object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.48)]"
               />
             </motion.div>
           </div>
