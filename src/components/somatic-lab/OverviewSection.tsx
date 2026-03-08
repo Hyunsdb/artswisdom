@@ -330,7 +330,7 @@ export function OverviewSection() {
               className="relative w-full aspect-square md:aspect-[1099/1178]"
             >
               <Image
-                src={images.somaticLab.differenceChart} // Original image is likely the difference chart or method
+                src={images.somaticLab.methodologyMain}
                 alt="소매틱스가 독특하고 효과적인 이유"
                 fill
                 className="object-contain"
