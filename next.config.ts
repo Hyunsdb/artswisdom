@@ -1,4 +1,7 @@
 import type { NextConfig } from "next";
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
+
+initOpenNextCloudflareForDev();
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -23,7 +26,6 @@ const nextConfig: NextConfig = {
       { source: '/소매틱랩', destination: '/somatic-lab', permanent: true },
     ];
   },
-  output: "standalone",
 };
 
 export default nextConfig;
