@@ -1,133 +1,154 @@
 "use client";
 
 import Image from "next/image";
-import { Section, SectionTitle } from "@/components/common";
+import { Section } from "@/components/common";
 import { images } from "@/constants/images";
+import { motion } from "framer-motion";
+
+const ciItems = [
+  {
+    title: "< 심볼마크 >",
+    image: images.logo.symbol,
+    items: [
+      "키워드 : 밭 전(田), 지혜의 밭(ㅈ, ㅎ, ㅇ, ㅂ)",
+      "디자인 : 삶의 터전이자 긍정적인 결실을 맺는 수확의 공간을 의미하는 밭에서\n모티브를 얻어 '밭전(田)'자를 단순화 하였으며, 지혜의밭 자음(ㅈ, ㅎ, ㅇ, ㅂ)활용",
+    ],
+  },
+  {
+    title: "< 기본형 로고 >",
+    image: images.logo.basic,
+    items: [
+      "'밭 전(田)'자를 단순화 하였고 지혜의밭 자음(ㅈ, ㅎ, ㅇ, ㅂ) 활용",
+      "지혜의밭에서 추구하는 ‘소통, 공감, 공연, 치유’의 키워드를 담은 그래픽 모티브 사용",
+    ],
+  },
+  {
+    title: "< 그래픽 모티브 >",
+    image: images.logo.expanded,
+    items: ["소통의 ‘대화’", "공감의 ‘어깨동무’", "예술의 ‘춤과 공연’", "치유의 ‘꽃’"],
+  },
+  {
+    title: "< 시그니춰 로고 >",
+    image: images.logo.brochure, // Note: The elementor uses brochure logo for signature
+    imageClassName: "object-contain object-center scale-[1.5]", // making it slightly bigger if needed
+    items: ["가로형 로고 심볼과 ‘소통·공감·해소·통섭’ 레터마크 혼합형"],
+  },
+  {
+    title: "< 한글 레터마크 >",
+    image: images.logo.lettermark,
+    items: [
+      "심볼의 정사각형 조형을 바탕으로 한글 로고타입 디자인",
+      "모던라이프의 Light 폰트를 바탕으로 지혜의밭만의 한글 로고타입",
+    ],
+  },
+];
+
+const colors = [
+  {
+    image: images.ci?.yellow || `${images.logo.main}`, // Fallback if missing
+    desc: "긍정의 에너지\n(Bright Yellow)\nCMYK 0 20 100 0",
+  },
+  {
+    image: images.ci?.orange || `${images.logo.main}`,
+    desc: "따뜻한 온정\n(Warm Orange)\nCMYK 0 85 100 0",
+  },
+  {
+    image: images.ci?.green || `${images.logo.main}`,
+    desc: "마음의 안정\n(Calm Green)\nCMYK 45 10 100 0",
+  },
+  {
+    image: images.ci?.blue || `${images.logo.main}`,
+    desc: "내면의 치유\n(Deep Blue)\nCMYK 100 100 0 15",
+  },
+];
 
 export function CISection() {
   return (
-    <Section id="ci" background="white" className="py-20 md:py-32">
-      <SectionTitle
-        title="CI"
-        subtitle="Corporate Identity"
-        align="center"
-      />
+    <Section id="ci" className="py-20 md:py-[100px] bg-[#FCF3EB] relative border-t-2 border-[#5B5B5B]">
+      <div className="max-w-[900px] mx-auto px-4 md:px-0">
+        <h2 className="text-center text-[36px] md:text-[40px] font-bold text-[#85544D] mb-[60px] tracking-tight font-['Times_New_Roman',_times,_serif]">
+          C.I
+        </h2>
 
-      <div className="max-w-5xl mx-auto px-4 space-y-24 mt-16">
-        {/* 1. Symbol Mark */}
-        <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-10 items-start">
-            <div className="relative w-full aspect-square border border-gray-100 bg-white shadow-sm flex items-center justify-center p-8">
-                <Image
-                    src={images.logo.symbol}
-                    alt="Symbol Mark"
-                    width={200}
-                    height={200}
-                    className="object-contain"
-                />
-            </div>
-            <div className="pt-2">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                    <span className="w-2 h-8 bg-[#8c5a5a]"></span>
-                    심볼마크 (Symbol Mark)
-                </h3>
-                <p className="text-gray-600 leading-loose text-lg mb-6">
-                    지혜의밭 심볼은 <strong>&apos;밭 전(田)&apos;</strong> 자를 모티브로 하여 삶의 터전을 형상화했습니다.
-                    지혜의밭의 초성 <strong>&apos;ㅈ, ㅎ, ㅇ, ㅂ&apos;</strong>을 조형적으로 배치하여, 
-                    각각의 요소가 서로 어우러지고 연결되는 유기적인 관계를 표현하고 있습니다.
-                </p>
-                <ul className="space-y-3 text-gray-600 text-lg">
-                    <li className="flex items-start gap-3">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#8c5a5a] mt-2.5"></span>
-                        <span><strong>Yellow (소통)</strong>: 밝은 에너지와 열린 마음</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#8c5a5a] mt-2.5"></span>
-                        <span><strong>Orange (공감)</strong>: 따뜻한 이해와 긍정적 시너지</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#8c5a5a] mt-2.5"></span>
-                        <span><strong>Green (예술)</strong>: 창의적인 활동과 삶의 기쁨</span>
-                    </li>
-                     <li className="flex items-start gap-3">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#8c5a5a] mt-2.5"></span>
-                        <span><strong>Blue (치유)</strong>: 내면의 평화와 건강한 삶</span>
-                    </li>
-                </ul>
-            </div>
+        <div className="flex flex-col space-y-[40px] md:space-y-[60px]">
+          {ciItems.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="flex flex-col md:flex-row items-center md:items-center justify-between gap-[20px] md:gap-[5%]"
+            >
+              {/* Image Column */}
+              <div className="w-full md:w-[45%] flex justify-center md:justify-end">
+                <div className="relative w-full max-w-[200px] aspect-square flex items-center justify-center">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className={item.imageClassName || "object-contain"}
+                  />
+                </div>
+              </div>
+
+              {/* Text Column */}
+              <div className="w-full md:w-[50%] flex flex-col justify-center">
+                <div className="text-left font-['Noto_Sans_KR',_sans-serif]">
+                  <h3 className="text-[15px] font-bold text-[#2B2B2B] mb-2">{item.title}</h3>
+                  <ul className="list-disc pl-5 space-y-[6px] text-left text-[#2B2B2B] text-[15px] font-normal leading-[1.8] tracking-tight marker:text-[#2B2B2B]">
+                    {item.items.map((line, lineIdx) => (
+                      <li key={lineIdx} className="pl-1">
+                        {line.split('\n').map((l, i) => (
+                          <span key={i}>
+                            {l}
+                            {i < line.split('\n').length - 1 && <br />}
+                          </span>
+                        ))}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
 
-        {/* 2. Basic Logo */}
-        <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-10 items-start">
-            <div className="relative w-full aspect-[2/1] border border-gray-100 bg-white shadow-sm flex items-center justify-center p-8">
-                <Image
-                    src={images.logo.basic}
-                    alt="Basic Logo"
-                    width={240}
-                    height={100}
+        {/* Color System */}
+        <div className="mt-20 md:mt-32 border-t-2 border-[#5B5B5B] pt-16">
+          <h2 className="text-center text-[28px] md:text-[32px] font-bold text-[#2B2B2B] mb-[40px] tracking-tight font-['Noto_Sans_KR',_sans-serif]">
+            컬러 시스템
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-[4%]">
+            {colors.map((color, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="flex flex-col items-center"
+              >
+                <div className="relative w-[100px] h-[100px] md:w-[150px] md:h-[150px] mb-6">
+                  <Image
+                    src={color.image}
+                    alt="Color"
+                    fill
                     className="object-contain"
-                />
-            </div>
-             <div className="pt-2">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                    <span className="w-2 h-8 bg-[#8c5a5a]"></span>
-                    기본형 (Basic Logo)
-                </h3>
-                <p className="text-gray-600 leading-loose text-lg">
-                    심볼마크와 로고타입을 조합한 가장 기본적인 활용형으로, 
-                    대외적인 커뮤니케이션에 우선적으로 사용됩니다.
-                    국문 로고타입은 신뢰감 있고 부드러운 서체를 사용하여 
-                    전문성과 친근함을 동시에 전달합니다.
-                </p>
-            </div>
+                  />
+                </div>
+                <div className="text-center text-[#2B2B2B] text-[14px] md:text-[15px] font-normal font-['Noto_Sans_KR',_sans-serif] leading-[1.6]">
+                  {color.desc.split('\n').map((line, i) => (
+                    <span key={i}>
+                      {line}
+                      {i < color.desc.split('\n').length - 1 && <br />}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
-
-         {/* 3. Graphic Motif (Pattern) -- Using 'expanded' image as placeholder or pure color patterns */}
-         <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-10 items-start">
-            <div className="relative w-full aspect-square border border-gray-100 bg-white shadow-sm flex items-center justify-center p-4">
-                 <Image
-                    src={images.logo.expanded} 
-                    alt="Graphic Motif"
-                    width={200}
-                    height={200}
-                    className="object-contain"
-                />
-            </div>
-             <div className="pt-2">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                    <span className="w-2 h-8 bg-[#8c5a5a]"></span>
-                    그래픽 모티브 (Graphic Motif)
-                </h3>
-                <p className="text-gray-600 leading-loose text-lg">
-                    지혜의밭의 아이덴티티를 보조하는 그래픽 요소로, 
-                    심볼의 조형적 특징을 패턴화하여 다양한 매체에 적용할 수 있습니다.
-                    브랜드 이미지를 일관성 있게 전달하고 시각적인 풍부함을 더해줍니다.
-                </p>
-            </div>
-        </div>
-
-        {/* 4. Lettermark / Signature */}
-        <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-10 items-start">
-             <div className="relative w-full aspect-[2/1] border border-gray-100 bg-white shadow-sm flex items-center justify-center p-8">
-                <Image
-                    src={images.logo.lettermark}
-                    alt="Korean Lettermark"
-                    width={200}
-                    height={80}
-                    className="object-contain"
-                />
-            </div>
-             <div className="pt-2">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                    <span className="w-2 h-8 bg-[#8c5a5a]"></span>
-                    한글 레터마크 및 시그니처
-                </h3>
-                <p className="text-gray-600 leading-loose text-lg">
-                    한글 상호만을 사용하여 명확한 정보 전달이 필요할 때 사용되는 레터마크입니다.
-                    공식 문서나 사인물 등 상황에 맞게 적절한 시그니처를 선택하여 사용할 수 있습니다.
-                </p>
-            </div>
-        </div>
-        
       </div>
     </Section>
   );
