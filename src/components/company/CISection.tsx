@@ -70,7 +70,7 @@ export function CISection() {
           C.I
         </h2>
 
-        <div className="flex flex-col space-y-[40px] md:space-y-[40px]">
+        <div className="flex flex-col space-y-[60px] md:space-y-[80px]">
           {ciItems.map((item, index) => (
             <motion.div
               key={index}
@@ -78,11 +78,11 @@ export function CISection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex flex-col md:flex-row items-center md:items-start justify-center gap-[20px] md:gap-[50px]"
+              className="flex flex-col md:flex-row items-center md:items-start justify-start gap-[30px] md:gap-[5%]"
             >
               {/* Image Column */}
-              <div className="w-full md:w-[45%] flex justify-center md:justify-end">
-                <div className="relative w-full max-w-[150px] md:max-w-[200px] flex items-center justify-center">
+              <div className="w-full md:w-[30%] flex justify-center md:justify-end">
+                <div className="relative w-full max-w-[150px] md:max-w-[130px] flex items-center justify-center">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -94,7 +94,7 @@ export function CISection() {
               </div>
 
               {/* Text Column */}
-              <div className="w-full md:w-[50%] flex flex-col justify-center pt-2 md:pt-[10px]">
+              <div className="w-full md:w-[65%] flex flex-col justify-start pt-0 md:pt-[10px]">
                 <div className="text-left font-['Noto_Sans_KR',_sans-serif]">
                   <h3 className="text-[14px] font-bold text-[#2B2B2B] mb-2">{item.title}</h3>
                   <ul className="list-disc pl-5 space-y-[4px] text-left text-[#2B2B2B] text-[14px] md:text-[14px] font-normal leading-[1.6] tracking-tight marker:text-[#2B2B2B]">
