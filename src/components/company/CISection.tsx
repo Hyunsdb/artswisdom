@@ -64,7 +64,7 @@ const colors = [
 
 export function CISection() {
   return (
-    <Section id="ci" className="py-20 md:py-[100px] bg-[#FCF3EB] relative border-t-2 border-[#5B5B5B]">
+    <Section id="ci" className="py-20 md:py-[100px] bg-[#FCF3EB] relative">
       <div className="max-w-[900px] mx-auto px-4 md:px-0">
         <h2 className="text-center text-[36px] md:text-[40px] font-bold text-[#85544D] mb-[60px] tracking-tight font-['Times_New_Roman',_times,_serif]">
           C.I
@@ -78,16 +78,17 @@ export function CISection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex flex-col md:flex-row items-center md:items-center justify-between gap-[20px] md:gap-[5%]"
+              className="flex flex-col md:flex-row items-center justify-center gap-[20px] md:gap-[5%]"
             >
               {/* Image Column */}
               <div className="w-full md:w-[45%] flex justify-center md:justify-end">
-                <div className="relative w-full max-w-[200px] aspect-square flex items-center justify-center">
+                <div className="relative w-full max-w-[260px] aspect-square flex items-center justify-center">
                   <Image
                     src={item.image}
                     alt={item.title}
-                    fill
-                    className={item.imageClassName || "object-contain"}
+                    width={350}
+                    height={350}
+                    className="w-full h-auto object-contain"
                   />
                 </div>
               </div>
