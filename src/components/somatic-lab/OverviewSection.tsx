@@ -329,11 +329,11 @@ export function OverviewSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative aspect-square md:aspect-[1099/1178] max-w-xs md:max-w-md mx-auto lg:max-w-none"
+              className="relative w-full aspect-square md:aspect-[1099/1178]"
             >
               <Image
-                src={images.somaticLab.holisticSomatic}
-                alt="소매틱 무브먼트 - 전인적 성장"
+                src={images.somaticLab.differenceChart} // Original image is likely the difference chart or method
+                alt="소매틱스가 독특하고 효과적인 이유"
                 fill
                 className="object-contain"
               />
