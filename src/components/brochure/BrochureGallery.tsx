@@ -24,7 +24,7 @@ export function BrochureGallery() {
               we can use intrinsic or responsive layout, but in Next 13+ we can use
               sizes="100vw" style={{ width: '100%', height: 'auto' }} */}
           <Image
-            src="https://refxscvyacxtohfjxysh.supabase.co/storage/v1/object/public/images/brochure/main-brochure.png"
+            src="https://hazrjfxlzlhymyfghhme.supabase.co/storage/v1/object/public/images/brochure/main-brochure.png"
             alt="지혜의밭 메인 브로슈어"
             width={1152}
             height={5000} // rough estimate of height to allow proper layout

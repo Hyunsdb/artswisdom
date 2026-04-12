@@ -19,7 +19,7 @@ export function BrochureHero() {
           playsInline
         >
           <source 
-            src="https://refxscvyacxtohfjxysh.supabase.co/storage/v1/object/public/images/brochure/coverv.mp4" 
+            src="https://hazrjfxlzlhymyfghhme.supabase.co/storage/v1/object/public/images/brochure/coverv.mp4" 
             type="video/mp4" 
           />
         </video>
