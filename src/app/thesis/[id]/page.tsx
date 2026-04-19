@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { getPaperById, getPaperSentences } from "@/lib/queries/thesis";
 import { ThesisDetail } from "@/components/thesis";
 
-export const revalidate = 86400;
+export const revalidate = 31536000;
 
 interface ThesisDetailPageProps {
   params: Promise<{ id: string }>;

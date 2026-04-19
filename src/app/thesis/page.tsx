@@ -8,7 +8,7 @@ import {
   ThesisPagination,
 } from "@/components/thesis";
 
-export const revalidate = 3600;
+export const revalidate = 31536000;
 
 export const metadata: Metadata = {
   title: "소매틱스 논문",
