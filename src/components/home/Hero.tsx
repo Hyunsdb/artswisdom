@@ -10,28 +10,24 @@ import { useCallback, useEffect, useState } from "react";
 const slides = [
   {
     title: "일상의 예술과 풍요로운 삶",
-    subtitle: "Arts of Living",
     description: "예술의 힘으로 본성을 회복하여 삶의 터전을 지혜롭게 가꿉니다.",
     cta: "/daily-art",
     image: images.hero.slide1,
   },
   {
     title: "모두의 리트릿",
-    subtitle: "Healsoma",
     description: "당신도 온전한 쉼이 필요합니다.",
     cta: "/healsoma",
     image: images.hero.slide2,
   },
   {
     title: "소셜벤처. 사회적기업",
-    subtitle: "Somatic Laboratory",
     description: "건강한 사회를 위해 웰니스 문화를 선도합니다.",
     cta: "/somatic-lab",
     image: images.hero.slide3,
   },
   {
     title: "온전한 관계로 행복한 사회",
-    subtitle: "Educational Event",
     description: "몸과 마음을 잇는, 사람과사람을 잇는 건강하고 아름다운 사회를 만듭니다.",
     cta: "/business",
     image: images.hero.main,
@@ -91,9 +87,6 @@ export function Hero() {
                 <div className="text-center px-4 sm:px-6 max-w-4xl mx-auto">
                   {selectedIndex === index && (
                     <div className="animate-fade-in space-y-6">
-                      <p className="text-base sm:text-lg md:text-xl text-white/90 tracking-[0.2em] uppercase font-light">
-                        {slide.subtitle}
-                      </p>
                       <h1 className="text-5xl md:text-7xl lg:text-7xl font-bold text-white leading-tight font-serif">
                         {slide.title}
                       </h1>
