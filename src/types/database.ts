@@ -233,6 +233,50 @@ export interface Database {
           created_at?: string;
         };
       };
+      thesis_reports: {
+        Row: {
+          id: number;
+          keyword_file_num: number;
+          keyword: string;
+          title: string;
+          address: string;
+          content: string;
+          sentence_num: number;
+          bookmark: string;
+          file: string | null;
+          created_at: string | null;
+          updated_at: string | null;
+          deleted_at: string | null;
+        };
+        Insert: {
+          id: number;
+          keyword_file_num?: number;
+          keyword?: string;
+          title?: string;
+          address?: string;
+          content: string;
+          sentence_num?: number;
+          bookmark?: string;
+          file?: string | null;
+          created_at?: string | null;
+          updated_at?: string | null;
+          deleted_at?: string | null;
+        };
+        Update: {
+          id?: number;
+          keyword_file_num?: number;
+          keyword?: string;
+          title?: string;
+          address?: string;
+          content?: string;
+          sentence_num?: number;
+          bookmark?: string;
+          file?: string | null;
+          created_at?: string | null;
+          updated_at?: string | null;
+          deleted_at?: string | null;
+        };
+      };
     };
     Views: Record<string, never>;
     Functions: Record<string, never>;
@@ -264,3 +308,4 @@ export type Researcher = Tables<"researchers">;
 export type Program = Tables<"programs">;
 export type Certification = Tables<"certifications">;
 export type Timeline = Tables<"timeline">;
+export type ThesisReport = Tables<"thesis_reports">;

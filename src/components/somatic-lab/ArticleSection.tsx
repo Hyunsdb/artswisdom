@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { images } from "@/constants/images";
 
 export function ArticleSection() {
@@ -39,14 +40,12 @@ export function ArticleSection() {
                   한국데이터산업진흥원의 지원으로 제작되었습니다.
                 </p>
               </div>
-              <a
-                href="https://somatic.artswisdom.com/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/thesis"
                 className="inline-block px-6 py-3 bg-[#85544D] text-white font-medium hover:bg-[#6f433c] transition-colors"
               >
                 논문 보기
-              </a>
+              </Link>
             </div>
 
             {/* Right: Image */}

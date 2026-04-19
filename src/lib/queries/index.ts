@@ -11,3 +11,10 @@ export { getResearchers, getResearcher } from "./researchers";
 export { getTimeline } from "./timeline";
 export { getCertifications } from "./certifications";
 export { submitInquiry } from "./inquiries";
+export {
+  searchThesisPapers,
+  getPaperById,
+  getPaperSentences,
+  type PaginatedPapers,
+  type PaperGroup,
+} from "./thesis";
