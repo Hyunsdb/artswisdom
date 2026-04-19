@@ -33,8 +33,8 @@ export function MissionVision() {
                         MISSION
                     </h2>
                     <p className="text-lg md:text-xl font-medium leading-relaxed break-keep">
-                        예술의 힘으로 본래의 인간성을 <br className="hidden lg:block"/>
-                        회복하여 삶의 터전을 지혜롭게 가꾼다
+                        예술의 힘으로 본성을 회복하여 <br className="hidden lg:block"/>
+                        삶의 터전을 지혜롭게 가꾼다
                     </p>
                 </motion.div>
 
@@ -78,7 +78,7 @@ export function MissionVision() {
 
                 <div className="space-y-6">
                     <p className="text-2xl md:text-3xl font-bold text-white">
-                        “관계로 건강해지는 사회!”
+                        “온전한 관계로 행복한 사회”
                     </p>
                     <p className="text-lg md:text-xl text-white leading-relaxed break-keep">
                         몸과 마음을 잇는, 사람과 사람을 잇는 <br className="hidden sm:block" />
