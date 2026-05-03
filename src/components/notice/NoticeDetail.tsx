@@ -65,7 +65,7 @@ export function NoticeDetail({ notice }: NoticeDetailProps) {
       {/* Content */}
       <div className="px-6 py-8">
         <div
-          className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-a:text-[var(--color-orange)] prose-a:no-underline hover:prose-a:underline prose-img:rounded-lg"
+          className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-a:text-[var(--color-orange)] prose-a:no-underline hover:prose-a:underline prose-img:rounded-lg text-left [&_*]:!text-left"
           dangerouslySetInnerHTML={{ __html: notice.content }}
         />
       </div>
