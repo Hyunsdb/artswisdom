@@ -116,21 +116,7 @@ export async function getAdjacentNotices(id: number): Promise<{
 
 export async function incrementViewCount(id: number): Promise<void> {
   const supabase = await createServerClient();
-
-  // Get current view count
-  const { data } = await supabase
-    .from("notices")
-    .select("*")
-    .eq("id", id)
-    .single();
-
-  if (data) {
-    const notice = data as Notice;
-    await supabase
-      .from("notices")
-      .update({ view_count: (notice.view_count ?? 0) + 1 } as never)
-      .eq("id", id);
-  }
+  await supabase.rpc("increment_notice_view" as never, { notice_id: id } as never);
 }
 
 // Legacy exports for backward compatibility
